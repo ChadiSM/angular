@@ -1,0 +1,22 @@
+<div class="player__btn player__btn--medium" id="forward">
+  <button  class="player__btn player__btn--medium" (click)="toggleSongDetails()" >Details</button>
+  <i class="fas fa-pause pause-btn hide"></i>
+
+</div>
+
+<div class="player__title" *ngIf="showSongDetails">
+  <div *ngIf="showSongDetails">
+<p>{{currentSong.name}}</p>
+    <p>Título: {{ currentSong.title }}</p>
+    <p>Artista: {{ currentSong.artist }}</p>
+    <p>Year: {{ currentSong.year }}</p>
+    <p>Style: {{ currentSong.style }}</p>
+    <p>Duración: {{ currentSong.duration }}</p>
+  </div>
+  <div  class="music-player">
+    <p >{{ currentSong.name }} </p>
+
+
+</div>
+
+
