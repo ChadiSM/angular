@@ -15,6 +15,19 @@ export class SongService {
   getSongs(){
     return this.songs;
   }
+  previousSong() {
+    const currentIndex = this.songs.indexOf(this.currentSong);
+    if (currentIndex > 0) {
+      this.currentSong = this.songs[currentIndex - 1];
+    }
+  }
+
+  nextSong() {
+    const currentIndex = this.songs.indexOf(this.currentSong);
+    if (currentIndex < this.songs.length - 1) {
+      this.currentSong = this.songs[currentIndex + 1];
+    }
+  }
 
 }
 

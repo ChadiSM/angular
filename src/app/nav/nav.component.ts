@@ -8,6 +8,9 @@ import { SongService } from '../song.service';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent {
+  getSongs(){
+    return this.songs;
+  }
   songs: { name: string; title: string; artist: string; year: string; style: string; duration: string; url: string; }[] = [];
 
   constructor(private songService: SongService) {}

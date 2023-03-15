@@ -4,19 +4,14 @@
 
 </div>
 
-<div class="player__title" *ngIf="showSongDetails">
-  <div *ngIf="showSongDetails">
-<p>{{currentSong.name}}</p>
-    <p>Título: {{ currentSong.title }}</p>
-    <p>Artista: {{ currentSong.artist }}</p>
-    <p>Year: {{ currentSong.year }}</p>
-    <p>Style: {{ currentSong.style }}</p>
-    <p>Duración: {{ currentSong.duration }}</p>
-  </div>
-  <div  class="music-player">
-    <p >{{ currentSong.name }} </p>
+ <div  *ngIf="showSongDetails">
+<div *ngFor="let song of songs">
 
+  <h2>{{ song.title }}</h2>
+  <p>{{ song.artist }}</p>
+  <p>{{ song.year }}</p>
+  <p>{{ song.style }}</p>
+  <p>{{ song.duration }}</p>
 
 </div>
-
-
+</div>
